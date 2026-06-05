@@ -1,0 +1,113 @@
+/* ===== Header Container ===== */
+.header {
+  height: 60px;
+  background: linear-gradient(
+    135deg,
+    #0f172a 0%,
+    #020617 100%
+  );
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.45);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ===== Left Side ===== */
+.header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #e5e7eb;
+  letter-spacing: 0.4px;
+}
+
+.header-subtitle {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* ===== Right Side ===== */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* ===== User Info ===== */
+.header-user {
+    background: #455667;
+    border: 1px solid #2ba3e7;
+    border-radius: 10px;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 10px;
+    display: flex;
+}
+
+/* Avatar */
+.header-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #6366f1, #4338ca);
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  font-weight: 700;
+  box-shadow: 0 4px 10px rgba(99, 102, 241, 0.35);
+}
+
+/* Text wrapper */
+.header-user-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+
+/* Username */
+.header-username {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+/* Role */
+.header-role {
+  font-size: 11px;
+  color: #ffffff;
+}
+
+
+/* ===== Logout Button ===== */
+.header-logout {
+  font-size: 13px;
+  padding: 7px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: transparent;
+  color: #e5e7eb;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.header-logout:hover {
+  background: linear-gradient(
+    135deg,
+    #ef4444,
+    #f97316
+  );
+  border-color: transparent;
+  color: #ffffff;
+  box-shadow: 0 0 14px rgba(239, 68, 68, 0.6);
+}

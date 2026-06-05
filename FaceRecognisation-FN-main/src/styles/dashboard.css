@@ -1,0 +1,496 @@
+/* *{
+  border: 2px solid red;
+} */
+
+/* ===== Dashboard Wrapper ===== */
+.dashboard {
+  background-color: #f8fafc;
+  min-height: calc(100vh - 60px);
+  padding: 16px; /* 🔻 pehle 24px tha */
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+/* ===== Page Title ===== */
+.dashboard-title {
+  font-size: 26px;
+  font-weight: 500;
+  letter-spacing: -0.4px;
+  color: #0f172a;
+  margin-bottom: 28px;
+  position: relative;
+  padding-left: 14px;
+}
+
+/* Accent bar */
+.dashboard-title::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 6px;
+  height: 70%;
+  width: 4px;
+  border-radius: 4px;
+  background: linear-gradient(
+    180deg,
+    #5eead4,
+    #38bdf8
+  );
+}
+
+
+/* ===== Cards Grid ===== */
+.dashboard-cards {
+   display: flex;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px; /* 🔻 pehle 20px tha */
+  width: 100%;
+}
+
+
+
+
+/* ===== Single Card ===== */
+.dashboard-card {
+    background: linear-gradient(135deg, #fdfefe 0%, #f4f9f9 100%);
+    border: 1px solid #e6f0ef;
+    border-radius: 14px;
+    /* min-width: 220px; */
+    padding: 16px;
+    transition: all .25s;
+    box-shadow: 0 4px 12px #0f172a0f;
+    width: 24%;
+}
+
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.15);
+}
+
+/* ===== Pastel Card Variants ===== */
+.dashboard-card.pastel-1 {
+  background: linear-gradient(135deg, #f0fdf9 0%, #e6fffa 100%);
+  border-color: #b2f5ea;
+}
+
+.dashboard-card.pastel-2 {
+  background: linear-gradient(135deg, #fefce8 0%, #fef9c3 100%);
+  border-color: #fde68a;
+}
+
+.dashboard-card.pastel-3 {
+  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  border-color: #bae6fd;
+}
+
+.dashboard-card.pastel-4 {
+  background: linear-gradient(135deg, #fdf4ff 0%, #fae8ff 100%);
+  border-color: #e9d5ff;
+}
+
+/* Text tuning for pastel */
+.pastel-1 .card-value { color: #065f46; }
+.pastel-2 .card-value { color: #92400e; }
+.pastel-3 .card-value { color: #075985; }
+.pastel-4 .card-value { color: #da3036; }
+
+/* ===== Card Title ===== */
+.card-title {
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: .6px;
+    margin-bottom: 8px;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+/* ===== Card Value ===== */
+.card-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: #020617;
+}
+.card-value {
+  font-size: 26px;
+}
+
+/* ===== Card Subtext ===== */
+.card-subtext {
+  font-size: 15px;
+  margin-top: 6px;
+  color: #94a3b8;
+}
+
+.card-footer {
+  margin-top: 14px;
+}
+
+/* ===== More Info Link ===== */
+.card-more {
+  font-size: 12px;
+  font-weight: 600;
+  color: #0f766e;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  transition: all 0.2s ease;
+}
+
+.card-more:hover {
+  text-decoration: underline;
+  transform: translateX(2px);
+}
+/* ===== Split Card Layout ===== */
+.card-split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+}
+
+/* ===== Split Item ===== */
+.card-split-item {
+  flex: 1;
+  text-align: center;
+}
+
+/* ===== Labels ===== */
+.split-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #64748b;
+  margin-bottom: 6px;
+}
+
+/* ===== Values ===== */
+.split-value {
+  font-size: 26px;
+  font-weight: 800;
+  color: #075985; /* pastel-3 matching */
+}
+
+/* ===== Vertical Divider ===== */
+.card-divider-vertical {
+  width: 1px;
+  height: 46px;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+/* ===== Footer ===== */
+.card-footer {
+  margin-top: 16px;
+}
+
+
+/* ===== Device Split ===== */
+.card-device-split {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+/* ===== Device Item ===== */
+.device-item {
+  flex: 1;
+  text-align: center;
+}
+
+/* ===== Device Labels ===== */
+.device-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  color: #da3036; /* pastel-4 vibe */
+  margin-bottom: 4px;
+}
+
+/* ===== Device Values ===== */
+.device-value {
+  font-size: 22px;
+  font-weight: 800;
+  color: #da3036;
+}
+
+
+/* ===== Section ===== */
+.dashboard-section {
+  margin-top: 40px;
+}
+
+.section-header {
+  margin-bottom: 12px;
+}
+
+.section-header h3 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* ===== Attendance Card ===== */
+.attendance-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+  padding: 20px;
+}
+
+/* ===== Top ===== */
+.attendance-top {
+  display: grid;
+  grid-template-columns: 2.5fr 1.2fr;
+  gap: 20px;
+}
+
+/* ===== Area Graph ===== */
+.area-graph {
+  position: relative;
+  height: 200px;
+}
+
+.area-graph svg {
+  width: 100%;
+  height: 100%;
+}
+
+.graph-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+/* ===== Side Stats ===== */
+.attendance-side {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.progress-item span {
+  font-size: 13px;
+  color: #475569;
+}
+
+.progress-item strong {
+  float: right;
+  font-size: 12px;
+}
+
+.progress-bar {
+  height: 6px;
+  background: #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 6px;
+}
+
+.progress-bar div {
+  height: 100%;
+  background: #3b82f6;
+}
+
+.progress-item.orange .progress-bar div {
+  background: #f59e0b;
+}
+
+.progress-item.gray .progress-bar div {
+  background: #9ca3af;
+}
+
+/* ===== Bottom ===== */
+.attendance-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 20px;
+  border-top: 1px solid #e5e7eb;
+  padding-top: 16px;
+  text-align: center;
+}
+
+.attendance-bottom h2 {
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.attendance-bottom small {
+  font-size: 12px;
+}
+
+.attendance-bottom p {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.blue { color: #0284c7; }
+.purple { color: #7c3aed; }
+
+/* ===== Realtime ===== */
+.realtime-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+  position: relative;
+}
+
+.realtime-card svg {
+  width: 100%;
+  height: 120px;
+}
+
+.realtime-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.live-dot {
+  width: 10px;
+  height: 10px;
+  background: #22c55e;
+  border-radius: 50%;
+  animation: pulse 1.4s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: .4; }
+  100% { opacity: 1; }
+}
+
+@media (max-width: 1200px) {
+  .dashboard-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+.realtime-time {
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+
+
+/* ===== Graphs Row ===== */
+.dashboard-graphs-row {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 24px;
+  margin-top: 40px;
+}
+
+/* ===== Card Wrapper ===== */
+.graph-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 20px;
+  box-shadow: 0 14px 35px rgba(0,0,0,0.12);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Section header */
+.section-header {
+  margin-bottom: 12px;
+}
+
+.section-header h3 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+/* ===== Attendance reused styles ===== */
+.attendance-top {
+  display: grid;
+  grid-template-columns: 2.2fr 1fr;
+  gap: 20px;
+}
+
+.area-graph {
+  height: 200px;
+}
+
+.area-graph svg {
+  width: 100%;
+  height: 100%;
+}
+
+.graph-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #64748b;
+  margin-top: 6px;
+}
+
+/* ===== Realtime ===== */
+.realtime-card-inner {
+  position: relative;
+  flex: 1;
+}
+
+.realtime-card-inner svg {
+  width: 100%;
+  height: 140px;
+}
+
+.realtime-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  margin-top: 10px;
+}
+
+.realtime-time {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #2563eb;
+}
+
+
+
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .dashboard-graphs-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 1024px) {
+  .dashboard-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-cards {
+    grid-template-columns: 1fr;
+  }
+}
